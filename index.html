@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="응답하라 마케팅 리뉴얼 뉴스레터 초안">
+  <title>응마도, 응답이도 조금씩 자랐으니까요</title>
+  <style>
+    :root {
+      --ink: #17202a;
+      --muted: #68707b;
+      --line: #e8eaef;
+      --soft: #f7f5f1;
+      --paper: #ffffff;
+      --accent: #386aff;
+      --accent-soft: #eef3ff;
+      --warn: #fff7de;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #f3f4f6;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      line-height: 1.72;
+      word-break: keep-all;
+    }
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      background: var(--paper);
+      min-height: 100vh;
+    }
+    header {
+      padding: 54px 28px 30px;
+      border-bottom: 1px solid var(--line);
+      text-align: center;
+    }
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: #2852c8;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    h1 {
+      margin: 0;
+      color: #111827;
+      font-size: 32px;
+      line-height: 1.28;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      margin: 16px auto 0;
+      max-width: 520px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    main {
+      padding: 28px;
+    }
+    p {
+      margin: 14px 0;
+      font-size: 17px;
+    }
+    strong { color: #111827; }
+    .note {
+      margin: 8px 0 28px;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--soft);
+      color: #3f4650;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .quote {
+      margin: 22px 0;
+      padding: 18px;
+      border-left: 4px solid var(--accent);
+      background: #f8fbff;
+      color: #263243;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.65;
+    }
+    h2 {
+      margin: 36px 0 12px;
+      color: #111827;
+      font-size: 24px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+    .divider {
+      height: 1px;
+      margin: 34px 0;
+      background: var(--line);
+    }
+    .callout {
+      margin: 24px 0;
+      padding: 18px;
+      border-radius: 8px;
+      background: var(--warn);
+      border: 1px solid #f1dfaa;
+    }
+    .callout p {
+      margin: 6px 0;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+    table {
+      width: 100%;
+      margin: 14px 0 22px;
+      border-collapse: collapse;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+    th, td {
+      padding: 10px 9px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+    th {
+      background: #fafafa;
+      color: #374151;
+      font-weight: 700;
+    }
+    details {
+      margin: 30px 0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfbfc;
+    }
+    summary {
+      cursor: pointer;
+      padding: 14px 16px;
+      font-weight: 800;
+      color: #111827;
+    }
+    .details-body {
+      padding: 0 16px 16px;
+    }
+    .button-wrap {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .button {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 15px;
+    }
+    footer {
+      margin-top: 44px;
+      padding: 26px 28px 40px;
+      border-top: 1px solid var(--line);
+      background: #fafafa;
+      color: #6b7280;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+    @media (max-width: 560px) {
+      header { padding: 38px 20px 24px; }
+      main { padding: 22px 20px; }
+      h1 { font-size: 27px; }
+      p { font-size: 16px; }
+      h2 { font-size: 21px; }
+      table { font-size: 13px; }
+      th, td { padding: 9px 7px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <span class="eyebrow">응답하라 마케팅 리뉴얼 뉴스레터 초안</span>
+      <h1>응마도, 응답이도 조금씩 자랐으니까요</h1>
+      <p class="subtitle">125명의 응답이가 알려준 것, 그리고 달라질 응마 이야기</p>
+    </header>
+
+    <main>
+      <div class="note">
+        작성 상태: 1차 작업본<br>
+        작성 기준: 기존 마파 뉴스레터 톤, 응마 위키/회의록 맥락, 마케터 커리어 및 연봉 실태 설문 분석 반영<br>
+        확인 필요: 코너별 변경 내용 일부 미취합
+      </div>
+
+      <p><strong>(에디터 마파 🔋) %name% 응답이 안녕!</strong></p>
+
+      <p>요즘 응마 팀에서는 이런 이야기를 자주 하고 있어.</p>
+
+      <div class="quote">“응마를 처음 시작했을 때랑 지금의 응답이는 많이 달라진 것 같지 않아?”</div>
+
+      <p>응마가 처음 시작됐을 때만 해도 우리 주변에는 취준생, 인턴, 막 일을 시작한 주니어 마케터가 많았어. 첫 회사는 어떻게 골라야 하는지, 마케팅 직무가 나와 맞는지, 사수 없이 어떻게 성장해야 하는지 묻는 응답이들이 많았지.</p>
+
+      <p>그래서 응마는 그 질문들에 하나씩 응답하고 싶어서 뉴스레터를 써왔어.</p>
+
+      <p>누군가에게는 첫 출근 전 읽는 레터였고, 누군가에게는 회사에서 혼자 헤매다 점심시간에 몰래 읽는 레터였고, 또 누군가에게는 “나만 이런 고민을 하는 게 아니구나” 느끼게 해주는 작은 랜선사수 같은 존재였으면 했어.</p>
+
+      <p>근데 시간이 꽤 흘렀더라.</p>
+
+      <p>응답이들도, 응마도.</p>
+
+      <h2>125명의 응답이가 알려준 것</h2>
+
+      <p>이번에 오픈채팅방에서 진행한 마케터 커리어·연봉 설문을 보면서 그 변화를 더 선명하게 느꼈어.</p>
+
+      <p>125명의 응답이가 설문에 답해줬고, 그중 가장 많은 응답자는 3~4년차와 5~7년차 마케터였어. 이제 응답이들은 단순히 “첫 회사를 어떻게 가야 할까?”만 묻지 않았어.</p>
+
+      <div class="quote">
+        “내 연차에 맞는 실력을 갖추고 있는 걸까?”<br>
+        “나는 지금 잘 성장하고 있는 걸까?”<br>
+        “다음 단계로 넘어가려면 무엇을 준비해야 할까?”<br>
+        “회사 규모에 따라 마케터의 역할은 어떻게 달라질까?”
+      </div>
+
+      <p>이런 질문들이 더 많이 보였지.</p>
+
+      <p>특히 응답자의 절반 이상은 <strong>“내 연차에 맞는 실력을 갖췄는지 모르겠다”</strong>고 답했어. 연봉이 궁금하다고 말했지만, 사실 그 안에는 단순히 숫자만 알고 싶은 마음보다 “나는 지금 어디쯤에 있는 걸까?”를 확인하고 싶은 마음이 더 크게 담겨 있었던 것 같아.</p>
+
+      <p>그래서 이번 설문은 응마에게도 하나의 신호처럼 느껴졌어.</p>
+
+      <p>응답이들이 처음 일을 시작하던 시기를 지나, 이제는 각자의 자리에서 다음 단계를 고민하고 있다면, 응마도 그 질문에 맞는 방식으로 바뀌어야 한다는 신호.</p>
+
+      <h2>그래서 응마도 조금 달라지려고 해</h2>
+
+      <p>더 자주 보내는 것보다, 더 오래 곁에 남는 방식으로.</p>
+
+      <p>더 많은 이야기를 흘려보내는 것보다, 지금의 응답이에게 필요한 이야기를 더 깊게 전하는 방식으로.</p>
+
+      <p>앞으로의 응마는 뉴스레터 발행 체계를 조금 다듬어보려고 해. 기존처럼 여러 번 자주 찾아가는 방식에서, 한 번을 보내더라도 더 밀도 있게 준비하는 방향으로 바뀔 예정이야.</p>
+
+      <p>물론 이게 응마가 덜 하겠다는 뜻은 아니야. 오히려 반대에 가까워.</p>
+
+      <p>뉴스레터 안에서만 만나던 응마를 넘어, 오픈채팅방과 오프라인 모임, 커뮤니티 콘텐츠, 마케터들의 실무 고민을 나누는 자리까지 조금 더 넓게 확장해보려고 해.</p>
+
+      <p>그동안 응마가 해왔던 일은 크게 달라지지 않아.</p>
+
+      <div class="quote">
+        마케터의 고민에 응답하는 것.<br>
+        혼자 일하는 것 같은 순간에, “나만 이런 고민을 하는 게 아니구나” 느끼게 해주는 것.<br>
+        때로는 랜선사수처럼, 때로는 같이 헤매는 짝꿍처럼 곁에 있는 것.
+      </div>
+
+      <p>다만 이제는 그 방식을 지금의 응답이들에게 맞게 다시 정리해보려 해.</p>
+
+      <h2>익숙했던 코너들도 잠깐 인사를 건넬 예정이야</h2>
+
+      <p>그래서 이번 레터에서는 그동안 응마를 채워온 몇몇 코너들이 각자의 방식으로 잠깐 인사를 건넬 예정이야.</p>
+
+      <p>먼저 월간 콜라스테이션과 월간 컴퍼니는 지금까지의 형식으로 마지막 이야기를 전하려고 해. 콜라보레이션과 브랜드의 움직임을 응마다운 시선으로 풀어내던 이 코너도, 이번 레터에서는 그동안의 시간을 돌아보고 다음 모습을 살짝 예고하는 방식으로 응답이에게 인사할 예정이야.</p>
+
+      <div class="callout">
+        <p><strong>[확인 필요]</strong> 월간 콜라스테이션/컴퍼니 담당자 인사 및 변화 방향 삽입</p>
+      </div>
+
+      <p>그리고 다른 코너들도 조금씩 변화의 방향을 정리하고 있어.</p>
+
+      <p>어떤 코너는 더 깊은 실무 인사이트를 담는 방식으로, 어떤 코너는 응답이들이 직접 남긴 고민과 질문을 더 적극적으로 다루는 방식으로 바뀔 수 있어.</p>
+
+      <div class="callout">
+        <p><strong>[확인 필요]</strong> 파트별 변화 방향 삽입: 마티클 / 커리어 / 커뮤니티 / 광고·제휴 / 기타 코너</p>
+      </div>
+
+      <p>아직 모든 변화가 완벽하게 정리된 건 아니야. 사실 응마도 지금 열심히 정리하는 중이거든. 썸네일도, 코너 소개도, 발행 방식도 한 번에 전부 바뀌기보다는 조금씩 다듬어질 예정이야.</p>
+
+      <p>그래도 이번 레터를 통해 응답이에게 먼저 말하고 싶었어.</p>
+
+      <div class="quote">
+        응마가 사라지는 게 아니라,<br>
+        응답이 곁에 더 오래 남기 위해 모양을 바꾸고 있다는 것.
+      </div>
+
+      <p>2021년의 응답이와 2026년의 응답이가 다르듯, 응마도 그대로 멈춰 있을 수는 없으니까.</p>
+
+      <p>처음에는 취업과 첫 커리어를 고민하던 응답이들이 이제는 미들로 넘어가는 기준을 묻고, 회사 안팎에서 어떻게 성장할지 고민하고, 때로는 이직과 연봉 협상, 번아웃과 포트폴리오를 동시에 붙잡고 있다는 걸 이번 설문을 통해 다시 알게 됐어.</p>
+
+      <p>앞으로 응마는 그런 질문들에 더 잘 응답해보고 싶어.</p>
+
+      <p>연차별 연봉 구간처럼 현실적인 정보도 다루고, 회사 규모별 마케터의 역할 차이도 살펴보고, 주니어에서 미들로 넘어가는 기준도 같이 고민하고, 혼자서는 정리하기 어려운 성과와 포트폴리오 이야기도 더 자주 해보려고 해.</p>
+
+      <p>그리고 뉴스레터 밖에서도 응답이들을 더 자주 만나고 싶어.</p>
+
+      <p>오프라인 모임이 될 수도 있고, 커뮤니티 대화가 될 수도 있고, 응답이들이 직접 자기 이야기를 꺼내는 자리가 될 수도 있겠지.</p>
+
+      <h2>평생 직장은 없어도, 평생 응마는 있을 수 있게</h2>
+
+      <p>응마가 처음부터 하고 싶었던 건 결국 하나였던 것 같아.</p>
+
+      <p><strong>마케터의 성장 고민에 응답하는 것.</strong></p>
+
+      <p>그 마음은 그대로 가져갈게.</p>
+
+      <p>다만 이제는 조금 더 자란 응답이들에게 맞는 방식으로, 응마도 같이 자라볼게.</p>
+
+      <p>그동안 익숙한 응마레터를 읽어준 응답이에게 고맙고, 앞으로 달라질 응마도 잘 부탁해.</p>
+
+      <p>우리 앞으로도 오래 보자.</p>
+
+      <p><strong>평생 직장은 없어도, 평생 응마는 있을 수 있게.</strong></p>
+
+      <div class="button-wrap">
+        <a class="button" href="https://www.reply-marketing.com/" target="_blank" rel="noopener">응답하라 마케팅 홈페이지 보기</a>
+      </div>
+
+      <details>
+        <summary>작업 메모: 현재 확인된 개편 내용</summary>
+        <div class="details-body">
+          <table>
+            <thead>
+              <tr>
+                <th>구분</th>
+                <th>현재 확인된 내용</th>
+                <th>상태</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>월간 콜라스테이션/컴퍼니</td>
+                <td>기존 레터 형식으로 작성, 마무리는 굿바이 형식 + 다음 레터 예고</td>
+                <td>확인됨</td>
+              </tr>
+              <tr>
+                <td>전체 발행 체계</td>
+                <td>주 1회 중심, 수요일은 광고/행사/커뮤니티성 레터 등 전략 슬롯 활용</td>
+                <td>위키/회의록 기준 확인</td>
+              </tr>
+              <tr>
+                <td>각 파트별 소감/변화 방향</td>
+                <td>각자 두 문단 정도 취합 예정</td>
+                <td>일부 미취합</td>
+              </tr>
+              <tr>
+                <td>썸네일 변경</td>
+                <td>바로 변경은 어려움. 이번 레터에서는 “이런 변화가 있을 것” 정도로 언급</td>
+                <td>미확정</td>
+              </tr>
+              <tr>
+                <td>이마트 쪽</td>
+                <td>화요일까지 받아도 될 듯하다는 대화 있음</td>
+                <td>미취합</td>
+              </tr>
+              <tr>
+                <td>달리님 파트</td>
+                <td>개인 사정으로 일정 조정 필요</td>
+                <td>미취합</td>
+              </tr>
+              <tr>
+                <td>일린님 파트</td>
+                <td>리뉴얼 인사 + 변화 방향 텍스트 정리 예정</td>
+                <td>진행 중</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+
+      <details>
+        <summary>작업 메모: 남은 확인 필요</summary>
+        <div class="details-body">
+          <table>
+            <thead>
+              <tr>
+                <th>항목</th>
+                <th>확인 필요 내용</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>발행일</td>
+                <td>다음 주 수요일 발행 기준 확정 여부</td>
+              </tr>
+              <tr>
+                <td>코너별 변경 내용</td>
+                <td>각 담당자 문구 취합 필요</td>
+              </tr>
+              <tr>
+                <td>썸네일</td>
+                <td>이번 레터에서 언급할 수 있는 수준 확인 필요</td>
+              </tr>
+              <tr>
+                <td>이마트 파트</td>
+                <td>화요일까지 취합 가능 여부 확인 필요</td>
+              </tr>
+              <tr>
+                <td>설문 데이터 링크</td>
+                <td>뉴스레터에서 설문 분석 결과를 별도 링크로 공개할지 여부</td>
+              </tr>
+              <tr>
+                <td>CTA</td>
+                <td>피드백 댓글, 오픈채팅, 홈페이지 공지 중 어느 CTA를 메인으로 둘지 결정 필요</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+    </main>
+
+    <footer>
+      © 2026 응답하라 마케팅<br>
+      취준생, 마케터의 성장 고민에 ‘응답하라 마케팅’<br>
+      뉴스레터 관련 문의: business@reply-marketing.com
+    </footer>
+  </div>
+</body>
+</html>
