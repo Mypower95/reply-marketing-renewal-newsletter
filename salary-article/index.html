@@ -102,6 +102,37 @@
       font-size: 15px;
       line-height: 1.65;
     }
+    .table-wrap {
+      margin: 16px 0 24px;
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    table {
+      width: 100%;
+      min-width: 520px;
+      border-collapse: collapse;
+      font-size: 14px;
+      line-height: 1.55;
+      background: #fff;
+    }
+    th, td {
+      padding: 10px 9px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #fafafa;
+      color: #374151;
+      font-weight: 700;
+    }
+    tr:last-child td { border-bottom: 0; }
+    td:nth-child(2), td:nth-child(3),
+    th:nth-child(2), th:nth-child(3) {
+      text-align: right;
+      white-space: nowrap;
+    }
     figure {
       display: block;
       margin: 24px 0 24px;
@@ -178,6 +209,169 @@
       <p>마케터라면 한 번쯤 이런 생각을 해본 적 있을 거예요. “내 연차에 이 연봉이면 괜찮은 걸까?”, “나는 지금 제대로 받고 있는 걸까?”, “연봉을 올리려면 결국 이직밖에 없을까?” 같은 질문이요.</p>
       <p>연봉은 궁금하지만 쉽게 묻기 어려운 주제입니다. 그래서 응답하라 마케팅 오픈채팅방에서 마케터 커리어 및 연봉 실태 설문을 진행했고, 이번 글에서는 연봉 응답을 확인할 수 있는 전체 95건과 비교 가능한 응답만 추린 클린셋 86건을 기준으로 정리했습니다.</p>
       <p class="note">이 데이터는 전체 마케터 시장을 대표하는 통계가 아닙니다. 응마 오픈채팅방 자발 응답 기반의 참고 데이터이며, 일부 연봉은 구간형 응답을 중간값으로 환산해 본 값입니다.</p>
+
+      <h2>먼저, 응답 데이터는 이렇게 생겼습니다</h2>
+      <p>이번 설문 전체 응답은 125건이었습니다. 다만 이 글에서 연봉을 깊게 분석할 때는 연봉 비교가 가능한 응답을 따로 추려 전체 95건, 클린셋 86건 기준으로 봤습니다.</p>
+      <p>그러니까 아래 표는 “설문 전체가 어떤 사람들로 구성되어 있었는지”를 보여주는 기본 분포이고, 뒤쪽 인사이트는 이 중 연봉 분석 가능 응답을 기준으로 해석한 내용입니다.</p>
+
+      <h2>Q1. 현재 연차</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>응답</th><th>응답 수</th><th>비중</th></tr></thead>
+          <tbody>
+            <tr><td>3~4년차</td><td>44명</td><td>35.2%</td></tr>
+            <tr><td>5~7년차</td><td>33명</td><td>26.4%</td></tr>
+            <tr><td>1~2년차</td><td>18명</td><td>14.4%</td></tr>
+            <tr><td>8~10년차</td><td>13명</td><td>10.4%</td></tr>
+            <tr><td>10년차 이상</td><td>9명</td><td>7.2%</td></tr>
+            <tr><td>1년 미만</td><td>5명</td><td>4.0%</td></tr>
+            <tr><td>취업 준비 중</td><td>2명</td><td>1.6%</td></tr>
+            <tr><td>인턴/계약직 경험 중</td><td>1명</td><td>0.8%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>가장 많은 응답자는 3~4년차였습니다. 3~4년차와 5~7년차를 합치면 77명, 전체의 61.6%입니다. 이번 설문은 막 입문한 마케터보다 “일은 어느 정도 해봤고, 이제 다음 기준이 궁금한 마케터”의 응답이 중심이었습니다.</p>
+
+      <h2>Q2. 담당하거나 관심 있는 마케팅 분야</h2>
+      <p>복수 선택 문항이라 합계는 100%를 넘습니다.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>응답</th><th>선택 수</th><th>비중</th></tr></thead>
+          <tbody>
+            <tr><td>마케팅 기획/전략</td><td>69명</td><td>55.2%</td></tr>
+            <tr><td>콘텐츠 마케팅</td><td>68명</td><td>54.4%</td></tr>
+            <tr><td>브랜드 마케팅</td><td>66명</td><td>52.8%</td></tr>
+            <tr><td>퍼포먼스 마케팅</td><td>57명</td><td>45.6%</td></tr>
+            <tr><td>SNS/인플루언서 마케팅</td><td>43명</td><td>34.4%</td></tr>
+            <tr><td>그로스 마케팅</td><td>24명</td><td>19.2%</td></tr>
+            <tr><td>CRM/리텐션 마케팅</td><td>23명</td><td>18.4%</td></tr>
+            <tr><td>B2B 마케팅</td><td>21명</td><td>16.8%</td></tr>
+            <tr><td>PR/커뮤니케이션</td><td>18명</td><td>14.4%</td></tr>
+            <tr><td>MD/커머스 마케팅</td><td>9명</td><td>7.2%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>상위 응답은 기획/전략, 콘텐츠, 브랜드, 퍼포먼스였습니다. 응답이들의 직무가 한 채널에만 묶여 있다기보다 여러 역할을 함께 맡고 있거나, 관심사가 넓게 퍼져 있다는 점도 같이 보였습니다.</p>
+
+      <h2>Q3. 현재 재직 중인 회사/조직 유형</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>응답</th><th>응답 수</th><th>비중</th></tr></thead>
+          <tbody>
+            <tr><td>중소기업</td><td>49명</td><td>39.2%</td></tr>
+            <tr><td>스타트업</td><td>28명</td><td>22.4%</td></tr>
+            <tr><td>중견기업</td><td>16명</td><td>12.8%</td></tr>
+            <tr><td>에이전시/대행사</td><td>14명</td><td>11.2%</td></tr>
+            <tr><td>취업 준비 중</td><td>6명</td><td>4.8%</td></tr>
+            <tr><td>대기업</td><td>5명</td><td>4.0%</td></tr>
+            <tr><td>외국계</td><td>2명</td><td>1.6%</td></tr>
+            <tr><td>기타</td><td>4명</td><td>3.2%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>중소기업과 스타트업 응답이 77명으로 전체의 61.6%였습니다. 그래서 이번 결과는 대기업 중심의 평균 연봉표라기보다, 작은 조직과 성장 중인 조직에서 일하는 마케터들의 현실에 더 가깝게 읽는 편이 맞습니다.</p>
+
+      <h2>Q4. 현재 연봉 구간</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>응답</th><th>응답 수</th><th>비중</th></tr></thead>
+          <tbody>
+            <tr><td>5,000만 원 이상 ~ 6,000만 원 미만</td><td>24명</td><td>19.2%</td></tr>
+            <tr><td>3,000만 원 이상 ~ 3,500만 원 미만</td><td>22명</td><td>17.6%</td></tr>
+            <tr><td>4,000만 원 이상 ~ 4,500만 원 미만</td><td>21명</td><td>16.8%</td></tr>
+            <tr><td>3,500만 원 이상 ~ 4,000만 원 미만</td><td>20명</td><td>16.0%</td></tr>
+            <tr><td>4,500만 원 이상 ~ 5,000만 원 미만</td><td>18명</td><td>14.4%</td></tr>
+            <tr><td>6,000만 원 이상 ~ 7,000만 원 미만</td><td>5명</td><td>4.0%</td></tr>
+            <tr><td>2,500만 원 미만</td><td>3명</td><td>2.4%</td></tr>
+            <tr><td>2,500만 원 이상 ~ 3,000만 원 미만</td><td>3명</td><td>2.4%</td></tr>
+            <tr><td>7,000만 원 이상 ~ 8,000만 원 이하</td><td>3명</td><td>2.4%</td></tr>
+            <tr><td>1억 이상</td><td>3명</td><td>2.4%</td></tr>
+            <tr><td>아직 연봉 없음</td><td>3명</td><td>2.4%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>연봉은 3,000만~6,000만 원 사이에 넓게 몰려 있었습니다. 단일 최빈 구간은 5,000만~6,000만 원이지만, 3,000만~5,000만 원대 응답도 촘촘하게 이어졌습니다.</p>
+
+      <h2>Q5. 현재 연봉에 대한 체감</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>응답</th><th>응답 수</th><th>비중</th></tr></thead>
+          <tbody>
+            <tr><td>조금 아쉬운 편</td><td>43명</td><td>34.4%</td></tr>
+            <tr><td>많이 아쉬운 편</td><td>31명</td><td>24.8%</td></tr>
+            <tr><td>보통</td><td>28명</td><td>22.4%</td></tr>
+            <tr><td>만족하는 편</td><td>18명</td><td>14.4%</td></tr>
+            <tr><td>현재 연봉 없음</td><td>3명</td><td>2.4%</td></tr>
+            <tr><td>아직 판단하기 어려움</td><td>1명</td><td>0.8%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>조금 아쉬운 편과 많이 아쉬운 편을 합치면 74명, 전체의 59.2%였습니다. 절반을 훌쩍 넘는 응답자가 현재 연봉에 아쉬움을 느끼고 있었습니다.</p>
+
+      <h2>Q6. 최근 1년 내 연봉 협상 또는 이직 고민</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>응답</th><th>응답 수</th><th>비중</th></tr></thead>
+          <tbody>
+            <tr><td>있다, 실제로 준비 중이다</td><td>53명</td><td>42.4%</td></tr>
+            <tr><td>있다, 고민만 해봤다</td><td>46명</td><td>36.8%</td></tr>
+            <tr><td>없다</td><td>16명</td><td>12.8%</td></tr>
+            <tr><td>아직 해당 없음</td><td>9명</td><td>7.2%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>실제로 준비 중인 응답과 고민만 해본 응답을 합치면 99명, 79.2%였습니다. 연봉 불만이 단순한 감정에 머무르지 않고, 이직이나 협상 고민으로 이어지고 있었습니다.</p>
+
+      <h2>Q7. 현재 커리어에서 가장 크게 느끼는 고민</h2>
+      <p>복수 선택 문항이라 합계는 100%를 넘습니다.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>응답</th><th>선택 수</th><th>비중</th></tr></thead>
+          <tbody>
+            <tr><td>내 연차에 맞는 실력을 갖췄는지 모르겠음</td><td>65명</td><td>52.0%</td></tr>
+            <tr><td>직무 전문성을 어떻게 쌓아야 할지 모르겠음</td><td>43명</td><td>34.4%</td></tr>
+            <tr><td>회사에서 성장하고 있다는 느낌이 적음</td><td>40명</td><td>32.0%</td></tr>
+            <tr><td>연봉이 적정한지 모르겠음</td><td>38명</td><td>30.4%</td></tr>
+            <tr><td>번아웃/체력 관리가 어려움</td><td>35명</td><td>28.0%</td></tr>
+            <tr><td>포트폴리오/성과 정리가 어려움</td><td>26명</td><td>20.8%</td></tr>
+            <tr><td>사수가 없거나 피드백을 받기 어려움</td><td>19명</td><td>15.2%</td></tr>
+            <tr><td>마케팅 직무가 나와 맞는지 고민됨</td><td>18명</td><td>14.4%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>가장 큰 고민은 연봉 자체보다 “내 연차에 맞는 실력을 갖췄는지 모르겠다”였습니다. 연봉 질문처럼 보였던 설문이 사실은 실력 기준, 성장 기준, 역할 기준에 대한 질문으로 이어진 이유입니다.</p>
+
+      <h2>Q8. 지금 본인의 커리어 속도</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>응답</th><th>응답 수</th><th>비중</th></tr></thead>
+          <tbody>
+            <tr><td>천천히 성장 중이라고 느낀다</td><td>44명</td><td>35.2%</td></tr>
+            <tr><td>정체되어 있다고 느낀다</td><td>37명</td><td>29.6%</td></tr>
+            <tr><td>빠르게 성장 중이라고 느낀다</td><td>23명</td><td>18.4%</td></tr>
+            <tr><td>방향을 다시 잡는 중이다</td><td>13명</td><td>10.4%</td></tr>
+            <tr><td>아직 잘 모르겠다</td><td>5명</td><td>4.0%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>천천히 성장 중이라는 응답이 가장 많았지만, 정체감을 느낀다는 응답도 37명으로 적지 않았습니다. 빠르게 성장 중이라는 응답보다 정체 응답이 더 많았다는 점은 이후 콘텐츠 방향에도 중요한 힌트입니다.</p>
+
+      <h2>Q9. 마케터로 일하면서 가장 궁금한 현실 정보</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>응답</th><th>응답 수</th><th>비중</th></tr></thead>
+          <tbody>
+            <tr><td>회사 규모별 마케터 역할 차이</td><td>32명</td><td>25.6%</td></tr>
+            <tr><td>연차별 연봉 구간</td><td>24명</td><td>19.2%</td></tr>
+            <tr><td>주니어에서 미들로 넘어가는 기준</td><td>22명</td><td>17.6%</td></tr>
+            <tr><td>포트폴리오/성과 정리 방법</td><td>18명</td><td>14.4%</td></tr>
+            <tr><td>직무별 연봉 차이</td><td>12명</td><td>9.6%</td></tr>
+            <tr><td>좋은 회사/팀을 고르는 기준</td><td>11명</td><td>8.8%</td></tr>
+            <tr><td>이직 시기와 기준</td><td>3명</td><td>2.4%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>가장 궁금한 정보는 연봉 구간 자체가 아니라 회사 규모별 마케터 역할 차이였습니다. 응답이들은 “얼마 받는가”만 궁금해한 게 아니라, “어떤 회사에서 어떤 역할을 맡아야 다음 단계로 갈 수 있는가”를 함께 궁금해하고 있었습니다.</p>
 
       <p>이번 글은 단순히 “몇 년차 평균 연봉은 얼마”를 보여주는 글로 끝내고 싶지 않았습니다. 평균은 보기 쉽지만, 마케터 커리어를 설명하기에는 자주 부족합니다. 같은 연차 안에서도 회사 규모, 맡은 채널, 예산 책임, 매출과의 거리, 팀에서의 의사결정 권한이 다르면 연봉은 꽤 다르게 움직이니까요.</p>
 
