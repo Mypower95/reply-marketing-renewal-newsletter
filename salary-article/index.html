@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="응답하라 마케팅 오픈채팅방 마케터 커리어 및 연봉 실태 설문조사 마티클 초안">
+  <title>125명의 마케터가 답한 연차별 연봉 구간</title>
+  <style>
+    :root {
+      --ink: #151922;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --paper: #fff;
+      --bg: #f6f8fc;
+      --blue: #386aff;
+      --blue-dark: #2448c7;
+      --mint: #2bb3a3;
+      --yellow: #f2b84b;
+      --red: #ef6a5b;
+      --red-dark: #d94b40;
+      --purple: #7c5cff;
+      --soft: #eef2f7;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Segoe UI", sans-serif;
+      line-height: 1.72;
+      word-break: keep-all;
+    }
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      background: var(--paper);
+      min-height: 100vh;
+    }
+    header {
+      padding: 70px 36px 42px;
+      border-bottom: 1px solid var(--line);
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #eaf0ff;
+      color: var(--blue-dark);
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 44px;
+      line-height: 1.22;
+      letter-spacing: 0;
+    }
+    .lead {
+      max-width: 760px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 20px;
+    }
+    main {
+      padding: 34px 36px 70px;
+    }
+    section {
+      margin: 44px 0;
+    }
+    h2 {
+      margin: 0 0 14px;
+      font-size: 29px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 12px 0;
+      font-size: 18px;
+    }
+    .note {
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcff;
+      color: #3f4650;
+      font-size: 15px;
+    }
+    .chart {
+      margin: 22px 0;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcff;
+    }
+    .chart h3 {
+      margin: 0 0 6px;
+      font-size: 25px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+    .chart .sub {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+    .source {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+    .metric {
+      min-height: 132px;
+      padding: 22px 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+    .metric strong {
+      display: block;
+      color: var(--blue-dark);
+      font-size: 42px;
+      line-height: 1.1;
+      font-weight: 800;
+    }
+    .metric span {
+      display: block;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+    .bar-row {
+      display: grid;
+      grid-template-columns: 250px 1fr 74px;
+      align-items: center;
+      gap: 14px;
+      margin: 14px 0;
+      font-size: 16px;
+    }
+    .track {
+      height: 28px;
+      border-radius: 999px;
+      background: var(--soft);
+      overflow: hidden;
+    }
+    .fill {
+      height: 100%;
+      border-radius: 999px;
+      background: var(--blue);
+    }
+    .value {
+      text-align: right;
+      font-weight: 700;
+    }
+    .salary-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
+      align-items: end;
+      min-height: 430px;
+      padding-top: 26px;
+      border-bottom: 1px solid var(--line);
+    }
+    .salary-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      align-items: end;
+      height: 360px;
+      position: relative;
+      padding-bottom: 54px;
+    }
+    .salary-bar {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      min-height: 80px;
+      border-radius: 12px 12px 0 0;
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 700;
+      padding-top: 8px;
+    }
+    .avg { background: var(--blue); color: #fff; }
+    .median { background: var(--yellow); color: #5f3c00; }
+    .salary-label {
+      position: absolute;
+      bottom: 6px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      color: var(--ink);
+      font-size: 14px;
+    }
+    .legend {
+      display: flex;
+      gap: 18px;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .legend span::before {
+      content: "";
+      display: inline-block;
+      width: 13px;
+      height: 13px;
+      margin-right: 7px;
+      border-radius: 3px;
+      vertical-align: -1px;
+      background: var(--blue);
+    }
+    .legend span:last-child::before { background: var(--yellow); }
+    .stack {
+      display: flex;
+      height: 72px;
+      overflow: hidden;
+      border-radius: 8px;
+      margin: 26px 0 20px;
+    }
+    .seg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      padding: 0 8px;
+    }
+    .seg.yellow { color: var(--ink); }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 24px;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    th, td {
+      padding: 11px 9px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fafafa; }
+    footer {
+      padding: 28px 36px 44px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    @media (max-width: 760px) {
+      header, main, footer { padding-left: 20px; padding-right: 20px; }
+      h1 { font-size: 32px; }
+      .lead { font-size: 17px; }
+      .cards { grid-template-columns: repeat(2, 1fr); }
+      .bar-row { grid-template-columns: 1fr; gap: 6px; }
+      .value { text-align: left; }
+      .salary-grid { grid-template-columns: repeat(2, 1fr); min-height: auto; }
+      .salary-group { height: 300px; }
+      .chart { padding: 20px; }
+      table { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <span class="eyebrow">응답하라 마케팅 마티클 초안</span>
+      <h1>125명의 마케터가 답한 연차별 연봉 구간</h1>
+      <p class="lead">응마 오픈채팅방 설문을 바탕으로 마케터 연봉 구간, 연봉 체감, 이직·협상 고민, 그리고 다음 콘텐츠 방향을 정리했습니다.</p>
+    </header>
+    <main>
+      <div class="note">
+        기준: 응답하라 마케팅 오픈채팅방 마케터 커리어 및 연봉 실태 설문조사 · 응답 수 125명 · 2026년 7월 자발 응답 기준<br>
+        주의: 전체 마케터 시장 평균으로 일반화하기보다, 응마 커뮤니티 응답자의 체감과 관심사를 읽는 참고 데이터로 보는 것이 적절합니다.
+      </div>
+
+      <section class="chart">
+        <h3>125명의 마케터가 답한 연봉과 커리어 고민</h3>
+        <p class="sub">연봉 숫자보다 더 크게 드러난 것은 “내 위치를 확인하고 싶은 마음”이었습니다.</p>
+        <div class="cards">
+          <div class="metric"><strong>125명</strong><span>총 응답 수</span></div>
+          <div class="metric"><strong>61.6%</strong><span>3~7년차 응답 비중</span></div>
+          <div class="metric"><strong>59.2%</strong><span>연봉 아쉬움 응답</span></div>
+          <div class="metric"><strong>52.0%</strong><span>실력 기준 고민</span></div>
+        </div>
+        <p class="source">응답하라 마케팅 오픈채팅방 설문 · n=125 · 2026.07</p>
+      </section>
+
+      <section>
+        <h2>응답자의 중심은 3~7년차 마케터였습니다</h2>
+        <p>3~7년차는 어느 정도 실무 경험이 쌓였지만, 동시에 “내가 잘 성장하고 있는 게 맞나?”라는 질문이 커지는 시기입니다.</p>
+        <div class="chart">
+          <h3>연차 분포</h3>
+          <p class="sub">3~4년차 35.2% + 5~7년차 26.4% = 61.6%</p>
+          <div class="bar-row"><span>3~4년차</span><div class="track"><div class="fill" style="width:88%"></div></div><span class="value">35.2%</span></div>
+          <div class="bar-row"><span>5~7년차</span><div class="track"><div class="fill" style="width:66%"></div></div><span class="value">26.4%</span></div>
+          <div class="bar-row"><span>1~2년차</span><div class="track"><div class="fill" style="width:36%"></div></div><span class="value">14.4%</span></div>
+          <div class="bar-row"><span>8~10년차</span><div class="track"><div class="fill" style="width:26%"></div></div><span class="value">10.4%</span></div>
+          <div class="bar-row"><span>10년차 이상</span><div class="track"><div class="fill" style="width:18%"></div></div><span class="value">7.2%</span></div>
+          <div class="bar-row"><span>1년 미만</span><div class="track"><div class="fill" style="width:10%"></div></div><span class="value">4.0%</span></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>전체 연봉 구간은 3,000만~6,000만 원 사이에 몰려 있었습니다</h2>
+        <div class="chart">
+          <h3>전체 연봉 구간 분포</h3>
+          <p class="sub">가장 많은 응답은 5,000만~6,000만 원 구간이었지만, 3,000만~5,000만 원대 응답도 넓게 분포했습니다.</p>
+          <div class="bar-row"><span>5,000만~6,000만 원</span><div class="track"><div class="fill" style="width:80%;background:var(--mint)"></div></div><span class="value">19.2%</span></div>
+          <div class="bar-row"><span>3,000만~3,500만 원</span><div class="track"><div class="fill" style="width:73%;background:var(--mint)"></div></div><span class="value">17.6%</span></div>
+          <div class="bar-row"><span>4,000만~4,500만 원</span><div class="track"><div class="fill" style="width:70%;background:var(--mint)"></div></div><span class="value">16.8%</span></div>
+          <div class="bar-row"><span>3,500만~4,000만 원</span><div class="track"><div class="fill" style="width:67%;background:var(--mint)"></div></div><span class="value">16.0%</span></div>
+          <div class="bar-row"><span>4,500만~5,000만 원</span><div class="track"><div class="fill" style="width:60%;background:var(--mint)"></div></div><span class="value">14.4%</span></div>
+          <div class="bar-row"><span>기타 구간</span><div class="track"><div class="fill" style="width:50%;background:var(--mint)"></div></div><span class="value">12.0%</span></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>연차별 연봉 참고값</h2>
+        <p>연차별 연봉은 극단값의 영향을 줄이기 위해 각 연차별 응답에서 최솟값 1건과 최댓값 1건을 제외하고 계산했습니다.</p>
+        <div class="chart">
+          <h3>추정 평균과 중앙값</h3>
+          <p class="sub">단위: 만 원 · 구간형 응답 중간값 기준</p>
+          <div class="salary-grid">
+            <div class="salary-group"><div class="salary-bar avg" style="height:50%">3,250</div><div class="salary-bar median" style="height:50%">3,250</div><span class="salary-label">1년 미만</span></div>
+            <div class="salary-group"><div class="salary-bar avg" style="height:55%">3,594</div><div class="salary-bar median" style="height:54%">3,500</div><span class="salary-label">1~2년차</span></div>
+            <div class="salary-group"><div class="salary-bar avg" style="height:63%">4,083</div><div class="salary-bar median" style="height:65%">4,250</div><span class="salary-label">3~4년차</span></div>
+            <div class="salary-group"><div class="salary-bar avg" style="height:77%">5,016</div><div class="salary-bar median" style="height:73%">4,750</div><span class="salary-label">5~7년차</span></div>
+            <div class="salary-group"><div class="salary-bar avg" style="height:84%">5,477</div><div class="salary-bar median" style="height:85%">5,500</div><span class="salary-label">8~10년차</span></div>
+            <div class="salary-group"><div class="salary-bar avg" style="height:71%">4,607</div><div class="salary-bar median" style="height:85%">5,500</div><span class="salary-label">10년차 이상</span></div>
+          </div>
+          <div class="legend"><span>추정 평균</span><span>중앙값</span></div>
+        </div>
+        <table>
+          <thead><tr><th>연차</th><th>추정 평균</th><th>중앙값</th><th>최빈 구간</th></tr></thead>
+          <tbody>
+            <tr><td>1년 미만</td><td>3,250만 원</td><td>3,250만 원</td><td>3,000만 원 이상 ~ 3,500만 원 미만</td></tr>
+            <tr><td>1~2년차</td><td>3,594만 원</td><td>3,500만 원</td><td>3,000만 원 이상 ~ 3,500만 원 미만</td></tr>
+            <tr><td>3~4년차</td><td>4,083만 원</td><td>4,250만 원</td><td>4,000만 원 이상 ~ 4,500만 원 미만</td></tr>
+            <tr><td>5~7년차</td><td>5,016만 원</td><td>4,750만 원</td><td>5,000만 원 이상 ~ 6,000만 원 미만</td></tr>
+            <tr><td>8~10년차</td><td>5,477만 원</td><td>5,500만 원</td><td>5,000만 원 이상 ~ 6,000만 원 미만</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>절반 이상은 현재 연봉이 아쉽다고 답했습니다</h2>
+        <div class="chart">
+          <h3>현재 연봉 체감</h3>
+          <p class="sub">조금 아쉬운 편 34.4% + 많이 아쉬운 편 24.8% = 59.2%</p>
+          <div class="stack">
+            <div class="seg" style="width:34.4%;background:var(--red)">조금 아쉬움<br>34.4%</div>
+            <div class="seg" style="width:24.8%;background:var(--red-dark)">많이 아쉬움<br>24.8%</div>
+            <div class="seg yellow" style="width:22.4%;background:var(--yellow)">보통<br>22.4%</div>
+            <div class="seg" style="width:14.4%;background:var(--mint)">만족<br>14.4%</div>
+            <div class="seg yellow" style="width:4%;background:#cbd5e1">기타</div>
+          </div>
+          <p><strong>연봉 불만족 59.2%</strong><br>연봉 문제는 단독 이슈라기보다 성장 기준과 이직·협상 고민으로 이어졌습니다.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>1~7년차의 이직·협상 고민 온도가 높았습니다</h2>
+        <div class="chart">
+          <h3>최근 1년 내 연봉 협상 또는 이직 고민 경험</h3>
+          <div class="bar-row"><span>1~2년차</span><div class="track"><div class="fill" style="width:94.4%;background:var(--purple)"></div></div><span class="value">94.4%</span></div>
+          <div class="bar-row"><span>5~7년차</span><div class="track"><div class="fill" style="width:87.9%;background:var(--purple)"></div></div><span class="value">87.9%</span></div>
+          <div class="bar-row"><span>3~4년차</span><div class="track"><div class="fill" style="width:81.8%;background:var(--purple)"></div></div><span class="value">81.8%</span></div>
+          <div class="bar-row"><span>8~10년차</span><div class="track"><div class="fill" style="width:69.2%;background:var(--purple)"></div></div><span class="value">69.2%</span></div>
+          <div class="bar-row"><span>10년차 이상</span><div class="track"><div class="fill" style="width:66.7%;background:var(--purple)"></div></div><span class="value">66.7%</span></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>응답이들이 가장 궁금해한 것은 역할의 기준이었습니다</h2>
+        <p>같은 연차라도 회사 규모, 직무 범위, 책임 수준에 따라 기대 역할은 크게 달라집니다. 그래서 연봉표만큼이나 역할 기준 콘텐츠 수요가 높았습니다.</p>
+        <div class="chart">
+          <h3>궁금한 현실 정보</h3>
+          <div class="bar-row"><span>회사 규모별 역할 차이</span><div class="track"><div class="fill" style="width:85%"></div></div><span class="value">25.6%</span></div>
+          <div class="bar-row"><span>연차별 연봉 구간</span><div class="track"><div class="fill" style="width:64%"></div></div><span class="value">19.2%</span></div>
+          <div class="bar-row"><span>주니어→미들 기준</span><div class="track"><div class="fill" style="width:59%"></div></div><span class="value">17.6%</span></div>
+          <div class="bar-row"><span>포트폴리오/성과 정리</span><div class="track"><div class="fill" style="width:48%"></div></div><span class="value">14.4%</span></div>
+          <div class="bar-row"><span>직무별 연봉 차이</span><div class="track"><div class="fill" style="width:32%"></div></div><span class="value">9.6%</span></div>
+          <div class="bar-row"><span>좋은 회사/팀 기준</span><div class="track"><div class="fill" style="width:29%"></div></div><span class="value">8.8%</span></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>이번 설문이 응마에게 남긴 질문</h2>
+        <p>이번 설문은 단순한 연봉 실태조사라기보다, 마케터들이 자신의 현재 위치를 확인하고 싶어한다는 신호에 가까웠습니다.</p>
+        <p>앞으로 응마에서는 연차별 연봉 구간뿐 아니라, 주니어에서 미들로 넘어가는 기준, 회사 규모별 마케터의 역할 차이, 성과와 포트폴리오를 정리하는 방법까지 함께 이야기해볼 예정입니다.</p>
+      </section>
+    </main>
+    <footer>
+      © 2026 응답하라 마케팅 · 공유용 초안 페이지
+    </footer>
+  </div>
+</body>
+</html>
