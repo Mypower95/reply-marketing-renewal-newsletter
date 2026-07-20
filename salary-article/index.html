@@ -7,157 +7,179 @@
   <title>마케터 연봉은 언제 갈릴까? 95명의 응답이가 알려준 현실</title>
   <style>
     :root {
-      --ink: #171a22;
-      --muted: #666e7c;
-      --line: #e4e8f0;
-      --bg: #f7f9fc;
+      --ink: #17202a;
+      --muted: #68707b;
+      --line: #e8eaef;
+      --soft: #f7f5f1;
       --paper: #ffffff;
-      --soft: #eef3ff;
-      --blue: #2448c7;
-      --red: #e95d52;
+      --accent: #386aff;
+      --accent-dark: #2852c8;
+      --accent-soft: #eef3ff;
+      --warn: #fff7de;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      background: var(--bg);
+      background: #f3f4f6;
       color: var(--ink);
-      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Segoe UI", sans-serif;
-      line-height: 1.78;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      line-height: 1.76;
       word-break: keep-all;
     }
     .page {
-      max-width: 980px;
+      max-width: 740px;
       margin: 0 auto;
       background: var(--paper);
       min-height: 100vh;
     }
     header {
-      padding: 72px 34px 44px;
+      padding: 54px 28px 34px;
       border-bottom: 1px solid var(--line);
+      text-align: center;
     }
     .eyebrow {
-      display: inline-flex;
-      padding: 6px 12px;
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 5px 10px;
       border-radius: 999px;
-      background: var(--soft);
-      color: var(--blue);
-      font-size: 14px;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      font-size: 13px;
       font-weight: 700;
-      margin-bottom: 18px;
     }
     h1 {
       margin: 0;
-      font-size: 46px;
-      line-height: 1.23;
+      color: #111827;
+      font-size: 34px;
+      line-height: 1.28;
       letter-spacing: 0;
     }
     .lead {
-      margin: 20px 0 0;
-      max-width: 760px;
+      margin: 16px auto 0;
+      max-width: 560px;
       color: var(--muted);
-      font-size: 20px;
+      font-size: 17px;
+      line-height: 1.55;
     }
-    main {
-      padding: 34px 34px 72px;
-    }
+    main { padding: 28px; }
     p {
-      margin: 13px 0;
-      font-size: 18px;
+      margin: 14px 0;
+      font-size: 17px;
     }
+    strong { color: #111827; }
     h2 {
-      margin: 58px 0 15px;
-      font-size: 30px;
-      line-height: 1.36;
+      margin: 40px 0 12px;
+      color: #111827;
+      font-size: 24px;
+      line-height: 1.35;
       letter-spacing: 0;
     }
     .note {
-      margin: 26px 0 8px;
-      padding: 18px 20px;
+      margin: 22px 0 30px;
+      padding: 16px 18px;
       border: 1px solid var(--line);
       border-radius: 8px;
-      background: #fbfcff;
-      color: #3e4652;
-      font-size: 15px;
+      background: var(--soft);
+      color: #3f4650;
+      font-size: 14px;
+      line-height: 1.6;
     }
     .summary {
-      margin: 30px 0 40px;
-      padding: 24px;
-      border: 1px solid var(--line);
+      margin: 26px 0 34px;
+      padding: 18px;
+      border: 1px solid #f1dfaa;
       border-radius: 8px;
-      background: #fbfcff;
+      background: var(--warn);
     }
     .summary strong {
       display: block;
-      margin-bottom: 12px;
-      font-size: 20px;
+      margin-bottom: 10px;
+      font-size: 18px;
     }
-    ol {
-      margin: 0;
-      padding-left: 22px;
-    }
+    ol { margin: 0; padding-left: 20px; }
     li {
-      margin: 8px 0;
-      font-size: 17px;
+      margin: 7px 0;
+      font-size: 15px;
+      line-height: 1.65;
     }
     figure {
-      margin: 26px 0 24px;
+      display: block;
+      margin: 24px 0 24px;
+      break-inside: avoid;
+      page-break-inside: avoid;
     }
     figure img {
       display: block;
       width: 100%;
+      height: auto;
       border: 1px solid var(--line);
       border-radius: 8px;
-      background: #f8faff;
+      background: var(--soft);
     }
     figcaption {
-      margin-top: 8px;
+      margin-top: 7px;
       color: var(--muted);
-      font-size: 13px;
+      font-size: 12px;
+      line-height: 1.5;
     }
     blockquote {
-      margin: 24px 0;
-      padding: 2px 0 2px 18px;
-      border-left: 4px solid var(--blue);
-      color: #2f3540;
-      font-size: 19px;
+      margin: 22px 0;
+      padding: 16px 18px;
+      border-left: 4px solid var(--accent);
+      background: #f8fbff;
+      color: #263243;
+      font-size: 18px;
       font-weight: 700;
+      line-height: 1.65;
+    }
+    .question {
+      margin: 22px 0;
+      padding: 18px;
+      border-radius: 8px;
+      background: #fbfbfc;
+      border: 1px solid var(--line);
+    }
+    .question p {
+      margin: 7px 0;
+      font-size: 16px;
     }
     .closing {
-      margin-top: 58px;
-      padding-top: 32px;
+      margin-top: 44px;
+      padding-top: 28px;
       border-top: 1px solid var(--line);
     }
     .meta {
-      margin-top: 30px;
+      margin-top: 28px;
       color: var(--muted);
-      font-size: 14px;
+      font-size: 13px;
     }
-    a { color: var(--blue); }
-    @media (max-width: 680px) {
-      header { padding: 46px 20px 32px; }
-      main { padding: 24px 20px 52px; }
-      h1 { font-size: 34px; }
-      h2 { font-size: 25px; }
+    a { color: var(--accent-dark); }
+    @media (max-width: 560px) {
+      header { padding: 38px 20px 26px; }
+      main { padding: 22px 20px; }
+      h1 { font-size: 28px; }
+      h2 { font-size: 21px; }
       p { font-size: 16px; }
-      .lead { font-size: 17px; }
-      .summary { padding: 18px; }
-      li { font-size: 16px; }
+      .lead { font-size: 16px; }
+      li { font-size: 14px; }
     }
   </style>
 </head>
 <body>
   <article class="page">
     <header>
-      <div class="eyebrow">마티클 초안 · 응답하라 마케팅</div>
+      <span class="eyebrow">응답하라 마케팅 마티클 초안</span>
       <h1>마케터 연봉은 언제 갈릴까?<br>95명의 응답이가 알려준 현실</h1>
       <p class="lead">연봉표만 보면 “내가 평균보다 높은가, 낮은가”만 남습니다. 그런데 이번 데이터에서 더 선명하게 보인 건 숫자보다 구조였습니다.</p>
     </header>
 
     <main>
-      <p>안녕하세요. 응답하라 마케팅의 마파입니다.</p>
+      <p><strong>안녕하세요. 응답하라 마케팅의 마파입니다.</strong></p>
       <p>마케터라면 한 번쯤 이런 생각을 해본 적 있을 거예요. “내 연차에 이 연봉이면 괜찮은 걸까?”, “나는 지금 제대로 받고 있는 걸까?”, “연봉을 올리려면 결국 이직밖에 없을까?” 같은 질문이요.</p>
       <p>연봉은 궁금하지만 쉽게 묻기 어려운 주제입니다. 그래서 응답하라 마케팅 오픈채팅방에서 마케터 커리어 및 연봉 실태 설문을 진행했고, 이번 글에서는 연봉 응답을 확인할 수 있는 전체 95건과 비교 가능한 응답만 추린 클린셋 86건을 기준으로 정리했습니다.</p>
       <p class="note">이 데이터는 전체 마케터 시장을 대표하는 통계가 아닙니다. 응마 오픈채팅방 자발 응답 기반의 참고 데이터이며, 일부 연봉은 구간형 응답을 중간값으로 환산해 본 값입니다.</p>
+
+      <p>이번 글은 단순히 “몇 년차 평균 연봉은 얼마”를 보여주는 글로 끝내고 싶지 않았습니다. 평균은 보기 쉽지만, 마케터 커리어를 설명하기에는 자주 부족합니다. 같은 연차 안에서도 회사 규모, 맡은 채널, 예산 책임, 매출과의 거리, 팀에서의 의사결정 권한이 다르면 연봉은 꽤 다르게 움직이니까요.</p>
 
       <div class="summary">
         <strong>먼저 결론부터 말하면</strong>
@@ -166,6 +188,8 @@
           <li>같은 3~4년차 안에서도 연봉 격차가 가장 크게 벌어졌습니다.</li>
           <li>기업 유형은 평균보다 연차 안에서 봐야 차이가 보였습니다.</li>
           <li>연차만 쌓아서는 연봉 천장을 뚫기 어려웠습니다.</li>
+          <li>평균 하나만 보면 같은 연차 안의 격차가 가려졌습니다.</li>
+          <li>협상은 3~4년차가 아니라 1~2년차의 성과 기록부터 준비해야 했습니다.</li>
           <li>그 결과 연봉 불만과 이직 고민이 동시에 높게 나타났습니다.</li>
         </ol>
       </div>
@@ -186,7 +210,12 @@
         <figcaption>3~4년차 연봉 격차. 같은 연차 안에서도 회사와 직무에 따라 차이가 컸습니다.</figcaption>
       </figure>
       <p>이 격차를 단순히 “누가 더 실력이 좋다”로만 설명하기는 어렵습니다. 개인 실력만큼이나 어떤 회사에 들어갔는지, 어떤 직무 범위를 맡았는지, 어떤 산업에서 일하고 있는지가 연봉 궤적을 크게 가른다는 뜻이기도 합니다.</p>
-      <p>그러니 “나는 4년차인데 왜 이 정도밖에 못 받지?”라고 생각하기 전에 먼저 봐야 할 질문은 이쪽에 가깝습니다. 나는 지금 어떤 회사에서, 어떤 역할을, 어느 정도 책임지고 있나?</p>
+      <p>3~4년차 구간에 응답이 가장 많이 몰렸다는 건, 이 시기의 마케터들이 특히 자신의 위치를 확인하고 싶어 한다는 뜻이기도 합니다. 이제 일은 어느 정도 할 줄 아는데, 내가 미들인지 아닌지, 지금 연봉이 시장에서 어느 정도인지, 다음 회사에서 어떤 역할로 평가받을 수 있는지는 여전히 흐릿한 시기니까요.</p>
+      <div class="question">
+        <p><strong>이 구간에서 봐야 할 질문</strong></p>
+        <p>나는 지금 어떤 회사에서, 어떤 역할을, 어느 정도 책임지고 있나?</p>
+        <p>내 연봉은 연차 때문에 오른 걸까, 역할 때문에 오른 걸까?</p>
+      </div>
 
       <h2>3. 기업 유형 차이는 평균보다 연차 안에서 봐야 했습니다</h2>
       <p>기업 유형별 중앙값만 보면 차이가 크게 보이지 않았습니다. 스타트업, 중소기업, 중견기업의 중앙값이 모두 4,200만 원 선에 붙어 있었습니다. 겉으로 보면 “기업 유형별 차이가 별로 없네?”라고 생각할 수 있습니다.</p>
@@ -195,7 +224,8 @@
         <figcaption>기업 유형별 연차 흐름. 단, 5~7년차 중견기업은 N=3으로 방향성 수준의 참고값입니다.</figcaption>
       </figure>
       <p>그런데 연차를 넣어서 보면 이야기가 달라집니다. 스타트업은 3~4년차까지 비교적 높은 값을 보였고, 5~7년차에서는 상승폭이 크지 않았습니다. 반대로 중견기업은 5~7년차에서 값이 크게 올라갔습니다. 중소기업은 상대적으로 낮게 출발하지만 연차가 쌓이며 꾸준히 올라가는 흐름을 보였습니다.</p>
-      <p>여기서 중요한 건 “어느 유형이 무조건 낫다”가 아닙니다. 기업 유형은 평균으로 보면 잘 안 보이고, 연차 안에서 봐야 갈립니다.</p>
+      <p>여기서 중요한 건 “어느 유형이 무조건 낫다”가 아닙니다. 초반에는 스타트업이 더 좋아 보일 수 있고, 어느 시점 이후에는 중견의 보상 구조가 더 강해질 수 있습니다. 중소기업도 역할이 넓어지면 상승 흐름이 생길 수 있습니다.</p>
+      <p>그러니까 회사 유형을 볼 때는 이름표보다 구조를 봐야 합니다. 내가 맡을 예산이 있는지, 성과를 숫자로 말할 수 있는 역할인지, 리더가 마케팅을 비용이 아니라 성장 동력으로 보는지가 같은 기업 유형 안에서도 연봉의 길을 다르게 만듭니다.</p>
 
       <h2>4. 마케터 연봉의 천장은 생각보다 낮게 나타났습니다</h2>
       <p>이번 데이터에서 가장 아쉬웠던 지점은 연봉 천장이었습니다. 8~10년차 중앙값도 약 5,500만 원 수준이었고, 7,000만 원을 넘는 응답은 전체 연차를 통틀어 많지 않았습니다.</p>
@@ -207,9 +237,27 @@
       <p>마케터는 연차가 올라가도 역할이 바뀌지 않으면 연봉도 크게 바뀌지 않을 수 있습니다. 계속 운영 실무자에 머무르는지, 예산과 매출을 책임지는지, 브랜드나 사업 목표와 연결된 의사결정에 들어가는지에 따라 몸값이 달라집니다.</p>
       <blockquote>조금 거칠게 말하면, 연차가 연봉을 올려주는 게 아니라 역할이 연봉을 올려줍니다.</blockquote>
 
-      <h2>5. 연봉 불만과 이직 고민은 이미 꽤 높은 수준이었습니다</h2>
-      <p>응답자의 63%는 현재 연봉이 아쉽다고 답했습니다. 조금 아쉽다는 응답이 40%, 많이 아쉽다는 응답이 23%였습니다.</p>
-      <p>그리고 84%는 이미 이직을 고민하고 있거나 실제로 준비 중이라고 답했습니다. 고민만 해봤다는 응답이 41%, 실제 준비 중이라는 응답이 43%였습니다.</p>
+      <h2>5. 평균은 생각보다 많은 걸 숨겼습니다</h2>
+      <p>이번 데이터에서 전체 중앙값만 보면 4,200만 원이라는 숫자가 나옵니다. 이 숫자만 보면 꽤 깔끔합니다. “응마 설문 기준 마케터 연봉 중앙값은 4,200만 원 정도구나”라고 정리할 수 있죠.</p>
+      <figure>
+        <img src="assets/06-average-hides-gap.png" alt="전체 중앙값 4,200만 원, 하지만 같은 연차 안 격차가 큼">
+        <figcaption>평균의 함정. 전체 중앙값보다 같은 연차 안의 분포가 더 중요했습니다.</figcaption>
+      </figure>
+      <p>하지만 이 숫자만 보면 정작 중요한 차이가 가려집니다. 3~4년차 안에서만 봐도 연봉은 3,200만 원대부터 6,500만 원대까지 벌어졌습니다. 전체 중앙값 4,200만 원보다 훨씬 중요한 건, 같은 연차 안에서 내가 어느 위치에 있는지입니다.</p>
+      <p>평균은 내 위치를 대충 알려줄 수는 있지만, 내 다음 선택을 정해주지는 못합니다. 오히려 분포를 봐야 합니다. 내 연차 안에서 상단에 있는 사람들은 어떤 회사에 있는지, 어떤 역할을 맡는지, 어떤 성과를 말할 수 있는지 봐야 다음 액션이 생깁니다.</p>
+
+      <h2>6. 협상은 3~4년차가 아니라 그 전에 준비해야 했습니다</h2>
+      <p>3~4년차에 연봉 계단이 생긴다면, 준비는 3~4년차가 되어서 시작하면 늦을 수 있습니다. 1~2년차 때는 당장 연봉 협상보다 일을 배우는 게 먼저라고 생각하기 쉽지만, 이 시기에 아무 기록도 남기지 않으면 3~4년차가 되었을 때 내가 무엇을 잘하는 사람인지 설명하기 어려워집니다.</p>
+      <figure>
+        <img src="assets/07-negotiation-timing.png" alt="1~2년차 성과 언어 만들기, 3~4년차 역할과 보상 재평가, 5년차 이후 직무와 회사 선택으로 점프">
+        <figcaption>협상 타이밍. 3~4년차의 계단은 1~2년차의 성과 기록에서 준비됩니다.</figcaption>
+      </figure>
+      <p>마케터의 성과는 생각보다 쉽게 흩어집니다. 캠페인 하나가 끝나고 나면 슬랙 대화로 남고, 보고서로 남고, 회고 없이 다음 업무로 넘어가는 경우가 많습니다.</p>
+      <p>그런데 연봉 협상이나 이직 시장에서 필요한 건 “열심히 했습니다”가 아니라 “어떤 문제를 맡았고, 어떤 방식으로 풀었고, 그래서 어떤 결과를 만들었습니다”입니다.</p>
+      <p>그러니 1~2년차부터 해야 할 일은 거창한 포트폴리오 제작이 아닐 수 있습니다. 내가 맡은 업무를 성과 언어로 바꾸는 연습, 팀의 결과와 내 기여를 연결해 보는 연습, 반복해서 잘하는 문제 유형을 찾는 연습이 먼저입니다.</p>
+
+      <h2>7. 연봉 불만과 이직 고민은 이미 꽤 높은 수준이었습니다</h2>
+      <p>응답자의 63%는 현재 연봉이 아쉽다고 답했습니다. 조금 아쉽다는 응답이 40%, 많이 아쉽다는 응답이 23%였습니다. 그리고 84%는 이미 이직을 고민하고 있거나 실제로 준비 중이라고 답했습니다. 고민만 해봤다는 응답이 41%, 실제 준비 중이라는 응답이 43%였습니다.</p>
       <figure>
         <img src="assets/05-dissatisfaction-mobility.png" alt="연봉 불만 63%, 이직 고민 또는 준비 84%">
         <figcaption>연봉 불만과 이직 고민. 완만한 상승 구조가 커리어 이동 압력으로 이어졌습니다.</figcaption>
